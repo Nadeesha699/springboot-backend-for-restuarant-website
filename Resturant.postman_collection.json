@@ -1,0 +1,1460 @@
+{
+	"info": {
+		"_postman_id": "d8fc8e10-f26f-40d6-a1b3-233b8f9446f1",
+		"name": "Resturant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33650581"
+	},
+	"item": [
+		{
+			"name": "TableBooking",
+			"item": [
+				{
+					"name": "setBooking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\":\"nadeesha\",\r\n    \"email\":\"nadeesha@gmail.com\",\r\n    \"dateTime\":\"2024-08-26T10:30:00\",\r\n    \"bookingCount\":3,\r\n    \"status\":\"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/add-booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"add-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllBooking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteBooking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-booking/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateBookingById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"userName\":\"nadeesha\",\r\n    \"email\":\"nadeesha@gmail.com\",\r\n    \"dateTime\":\"2024-08-26T10:30:00\",\r\n    \"bookingCount\":3,\r\n    \"status\":\"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-booking/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-booking",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookingByEmail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/view-booking-by-email?email=nadeesha@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-booking-by-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "nadeesha@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookingById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-booking-by-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-booking-by-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getBookingByStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/api/view-booking-by-status?status=PENDING",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"api",
+								"view-booking-by-status"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RestuarantService",
+			"item": [
+				{
+					"name": "viewAllServices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteServiceById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-service/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-service",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateServiceById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "serviceName",
+									"value": "test service ",
+									"type": "text"
+								},
+								{
+									"key": "serviceDiscription",
+									"value": "service diss",
+									"type": "text"
+								},
+								{
+									"key": "serviceImage",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/checked.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-service/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-service",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setService",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "serviceName",
+									"value": "service 1",
+									"type": "text"
+								},
+								{
+									"key": "serviceDiscription",
+									"value": "service dis",
+									"type": "text"
+								},
+								{
+									"key": "serviceImage",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/file.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/add-service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"add-service"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RestuarantGallery",
+			"item": [
+				{
+					"name": "viewAllGalleryBySettingId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/veiw-gallery-images/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"veiw-gallery-images",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllGalleryBySettingId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-gallery-images/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-gallery-images",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setGalleryBySettingId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "galleryImage",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/add-new-gallery-image/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"add-new-gallery-image",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateGalleryBySettingIdAndGalleryId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "galleryImage",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-gallery-image/1/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-gallery-image",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RestuarantSetting",
+			"item": [
+				{
+					"name": "viewSetting",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/get-setting-by-id/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"get-setting-by-id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSetting",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-setting/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-setting",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setSetting",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "restuarantName",
+									"value": "kottu kade",
+									"type": "text"
+								},
+								{
+									"key": "restuarantAbout",
+									"value": "test about",
+									"type": "text"
+								},
+								{
+									"key": "restuarantLogo",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/cancel.png"
+								},
+								{
+									"key": "restuarantCoverPhoto",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/out.png"
+								},
+								{
+									"key": "restuarantEmail",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "restuarantContactNo",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "restuarantAddress",
+									"value": "matara",
+									"type": "text"
+								},
+								{
+									"key": "restuarantOpentime",
+									"value": "01:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/set-setting",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"set-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSetting",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "restuarantName",
+									"value": "kottu kade",
+									"type": "text"
+								},
+								{
+									"key": "restuarantAbout",
+									"value": "test about",
+									"type": "text"
+								},
+								{
+									"key": "restuarantLogo",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/cross.png"
+								},
+								{
+									"key": "restuarantCoverPhoto",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/close.png"
+								},
+								{
+									"key": "restuarantEmail",
+									"value": "test@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "restuarantContactNo",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "restuarantAddress",
+									"value": "matara",
+									"type": "text"
+								},
+								{
+									"key": "restuarantOpentime",
+									"value": "01:00:00",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-setting/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-setting",
+								"1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RestuarantMenu",
+			"item": [
+				{
+					"name": "viewAllMenu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllMenuByType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-menu?mealType",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-menu"
+							],
+							"query": [
+								{
+									"key": "mealType",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMenuById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-menu/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-menu",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setMenu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mealName",
+									"value": "kottu",
+									"type": "text"
+								},
+								{
+									"key": "mealPrice",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "mealRate",
+									"value": "2.3",
+									"type": "text"
+								},
+								{
+									"key": "mealType",
+									"value": "MEAT",
+									"type": "text"
+								},
+								{
+									"key": "mealDicription",
+									"value": "test dis",
+									"type": "text"
+								},
+								{
+									"key": "mealImage",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/check.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/add-menu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"add-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMenuById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mealName",
+									"value": "kottu",
+									"type": "text"
+								},
+								{
+									"key": "mealPrice",
+									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "mealRate",
+									"value": "2.3",
+									"type": "text"
+								},
+								{
+									"key": "mealType",
+									"value": " VEGETARIAN",
+									"type": "text"
+								},
+								{
+									"key": "mealDicription",
+									"value": "test dis",
+									"type": "text"
+								},
+								{
+									"key": "mealImage",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/check.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-menu/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-menu",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "date",
+									"value": "2024-08-26T10:30:00",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/out.png"
+								},
+								{
+									"key": "passord",
+									"value": "12345689",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "setUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userName",
+									"value": "Nadeesha",
+									"type": "text"
+								},
+								{
+									"key": "userProfile",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/cross.png"
+								},
+								{
+									"key": "contactNo",
+									"value": "0711764232",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "saman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "userAddress",
+									"value": "matara",
+									"type": "text"
+								},
+								{
+									"key": "roleType",
+									"value": "MALE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/set-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"set-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userName",
+									"value": "Nadeesha",
+									"type": "text"
+								},
+								{
+									"key": "userProfile",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/cross.png"
+								},
+								{
+									"key": "contactNo",
+									"value": "0711764232",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "saman@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "userAddress",
+									"value": "matara",
+									"type": "text"
+								},
+								{
+									"key": "roleType",
+									"value": "ADMIN",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-user/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap/delete-user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap",
+								"delete-user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsersByRoleType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-users-by-role?roleType=EMPLOYEE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-users-by-role"
+							],
+							"query": [
+								{
+									"key": "roleType",
+									"value": "EMPLOYEE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsersById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "userLogin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user-login?email=saman@gmail.com&password=1234567",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user-login"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "saman@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "1234567"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FoodOrder",
+			"item": [
+				{
+					"name": "updateOrderById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":1,\r\n    \"orderDate\":\"2024-08-26T10:30:00\",\r\n    \"totalAmout\":200.00,\r\n    \"orderStatus\":\"PENDING\",\r\n    \"paymentMethod\":\"CARD\",\r\n    \"deliveryAddress\":\"matara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-food-order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-food-order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "setOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":1,\r\n    \"orderDate\":\"2024-08-26T10:30:00\",\r\n    \"totalAmout\":200.00,\r\n    \"orderStatus\":\"PENDING\",\r\n    \"paymentMethod\":\"CARD\",\r\n    \"deliveryAddress\":\"matara\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/set-food-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"set-food-order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-food-orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-food-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrderById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete/food-order/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete",
+								"food-order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllOrdersByCustomerId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-food-orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-food-orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllOrdersByStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-food-orders-by-status?orderStatus=PENDING",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-food-orders-by-status"
+							],
+							"query": [
+								{
+									"key": "orderStatus",
+									"value": "PENDING"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderList",
+			"item": [
+				{
+					"name": "setOrderItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"orderId\":1,\r\n   \"mealId\":1,\r\n   \"quantity\":2,\r\n   \"price\":300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/set-order-item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"set-order-item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateOrderItemByOrderItemId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"orderId\":1,\r\n   \"mealId\":1,\r\n   \"quantity\":24,\r\n   \"price\":300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/update-order-item/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"update-order-item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllOrderItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-order-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-order-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrderItems",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-all-order-items",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-all-order-items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrderItemsByOrderId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-all-order-items/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-all-order-items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteOrderItemByOrderItemid",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/delete-order-items/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"delete-order-items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewAllOrderItemByOrderId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-all-order-items/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-all-order-items",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewOrderItemByOrderItemid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/view-order-item/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"view-order-item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
